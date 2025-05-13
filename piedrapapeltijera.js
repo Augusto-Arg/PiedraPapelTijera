@@ -10,3 +10,7 @@ function getComputerChoice() {
   }
 }
 console.log(getComputerChoice())
+function getHumanChoice() {
+    let usuario= window.prompt("Elegi piedra papel tijera")
+    console.log(usuario)
+}
