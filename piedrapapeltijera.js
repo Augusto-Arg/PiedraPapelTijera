@@ -11,6 +11,8 @@ function getComputerChoice() {
 }
 console.log(getComputerChoice())
 function getHumanChoice() {
-    let usuario= window.prompt("Elegi piedra, papel o tijeras");
-   return usuario;
+  // Ask the user for their choice
+  const userChoice = prompt("Rock, Paper, or Scissors?");
+  // Normalize to lowercase
+  return userChoice.toLowerCase();
 }
