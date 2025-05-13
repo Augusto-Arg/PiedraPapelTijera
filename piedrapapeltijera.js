@@ -15,5 +15,5 @@ function getHumanChoice() {
   const userChoice = prompt("Rock, Paper, or Scissors?");
   // Normalize to lowercase
   return userChoice.toLowerCase();
-  console.log(getHumanChoice)
 }
+console.log(getHumanChoice());
