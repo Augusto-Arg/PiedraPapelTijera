@@ -11,6 +11,6 @@ function getComputerChoice() {
 }
 console.log(getComputerChoice())
 function getHumanChoice() {
-    let usuario= prompt("Elegi piedra papel tijera");
-    console.log(usuario);
+    let usuario= window.prompt("Elegi piedra, papel o tijeras");
+   return usuario;
 }
