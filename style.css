@@ -1,0 +1,14 @@
+h1{
+  text-align: center;  
+  padding-top: 300px;
+  color: white;
+  font-family: 'Courier New', Courier, monospace;
+}
+p{
+   color: white;
+   font-family: 'Courier New', Courier, monospace;
+   text-align: center; 
+}
+body{
+    background-color: black;
+}
