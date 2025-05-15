@@ -12,7 +12,7 @@ function getComputerChoice() {
 
 function getHumanChoice() {
   // funcion getHumanChoice
-  const userChoice = prompt("¿piedra, papel o tijera?");
+  const userChoice = prompt("¿piedra, papel o tijeras?");
   // abre una ventana que le pide al usuario que elija algo y el tiene que escribir una opcion
   return userChoice.toLowerCase(); //normaliza la minusculas evita errores por escribir mayusculas
 }
