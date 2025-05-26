@@ -13,9 +13,10 @@ function playGame() {
   let humanScore = 0;
   let computerScore = 0;
 
+  const resultadoDiv = document.getElementById("resultado");
+
   function playRound(humanChoice) {
     const computerChoice = getComputerChoice();
-    const resultadoDiv = document.getElementById("resultado");
     let mensaje = "";
 
     if (humanChoice === computerChoice) {
@@ -38,26 +39,26 @@ function playGame() {
     `;
 
     if (humanScore >= 5 || computerScore >= 5) {
-      let finalMensaje = "\n--- Resultado final ---<br>";
       if (humanScore > computerScore) {
-        finalMensaje += "🎉 ¡Ganaste el juego!";
-      } else if (humanScore < computerScore) {
-        finalMensaje += "💻 La computadora ganó el juego.";
+        resultadoDiv.innerHTML += "<br>🎉 ¡Ganaste el juego!";
+      } else if (computerScore > humanScore) {
+        resultadoDiv.innerHTML += "<br>💻 La computadora ganó el juego.";
       } else {
-        finalMensaje += "🤝 El juego terminó en empate.";
+        resultadoDiv.innerHTML += "<br>🤝 El juego terminó en empate.";
       }
-      resultadoDiv.innerHTML = finalMensaje;
 
-      // Opcional: deshabilitar botones al finalizar el juego
+      // Opcional: deshabilitar botones al terminar el juego
       document.getElementById("piedra").disabled = true;
       document.getElementById("papel").disabled = true;
       document.getElementById("tijeras").disabled = true;
     }
   }
 
+  // Event listeners **dentro** de playGame para que vean playRound y variables
   document.getElementById("piedra").addEventListener("click", () => playRound("piedra"));
   document.getElementById("papel").addEventListener("click", () => playRound("papel"));
   document.getElementById("tijeras").addEventListener("click", () => playRound("tijeras"));
 }
 
+// Llamá a playGame para iniciar todo
 playGame();
